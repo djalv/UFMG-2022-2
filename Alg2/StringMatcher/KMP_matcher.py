@@ -21,13 +21,15 @@ def KMP_matcher(P,T):
     for i in range(n):
         while q > 0 and P[q] != T[i]:
             q = int(p[q])
+            if q == 0:
+                q = q + 1
         if P[q] == T[i]:
             q = q + 1
         if q == m:
             print("Padrão ocorre com deslocamento ", i-m+1)
             q = int(p[q-1])
 
-T = "ABCD"
-P = "CDAB"
+T = "ababbababaca"
+P = "ababaca"
 print(compute_prefix_function(P))
 KMP_matcher(P, T)

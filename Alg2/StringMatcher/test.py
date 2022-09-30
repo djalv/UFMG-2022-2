@@ -11,7 +11,4 @@ def longest_sufix(P, T):
         p[q] = k
     return p[-1]
 
-P = "CDAB"
-T = "ABCD"
-
-print(longest_sufix(P, T))
+print(-0b100)
